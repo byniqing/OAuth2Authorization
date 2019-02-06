@@ -1,0 +1,23 @@
+﻿@model AuthorizationServer.ViewModels.LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <span>UserName：</span>
+        <input asp-for="Email" /><br />
+        <span>PassWord：</span>
+        <input type="password" asp-for="PassWrod" /><br />
+        <input type="hidden" asp-for="ReturnUrl" />
+        <input type="submit" asp-for="Action" value="Login" />
+        <input type="submit" asp-for="Action" value="Cancel" />
+    }
+</body>
+</html>

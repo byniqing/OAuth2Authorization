@@ -1,0 +1,14 @@
+F:\OAuth2Authorization\ResourcesServer\bin\Debug\netcoreapp2.2\ResourcesServer.deps.json
+F:\OAuth2Authorization\ResourcesServer\bin\Debug\netcoreapp2.2\ResourcesServer.runtimeconfig.json
+F:\OAuth2Authorization\ResourcesServer\bin\Debug\netcoreapp2.2\ResourcesServer.runtimeconfig.dev.json
+F:\OAuth2Authorization\ResourcesServer\bin\Debug\netcoreapp2.2\ResourcesServer.dll
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.csproj.CoreCompileInputs.cache
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.RazorAssemblyInfo.cache
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.RazorAssemblyInfo.cs
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.AssemblyInfoInputs.cache
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.AssemblyInfo.cs
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.RazorTargetAssemblyInfo.cache
+F:\OAuth2Authorization\ResourcesServer\bin\Debug\netcoreapp2.2\ResourcesServer.pdb
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.csprojAssemblyReference.cache
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.dll
+F:\OAuth2Authorization\ResourcesServer\obj\Debug\netcoreapp2.2\ResourcesServer.pdb

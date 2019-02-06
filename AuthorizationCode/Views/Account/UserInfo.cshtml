@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@using Newtonsoft.Json.Linq
+@using System.Text
+@using IdentityModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserInfo</title>
+</head>
+<body>
+    个人信息
+    @if (User.Identity.IsAuthenticated)
+    {
+        <span>用户名：</span>@ViewBag.userName
+        <span>地址：</span>@ViewBag.address
+        <form action="/Account/Lognout" method="get">
+            <button id="weibo">退出登陆</button>
+        </form>
+    }
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <span style="color:red">id_token:</span><br />
+        @await ViewContext.HttpContext.GetTokenAsync("id_token")
+        <br />
+        <span style="color:red">access_token:</span>
+        <br />
+        @await ViewContext.HttpContext.GetTokenAsync("access_token")
+        <br />
+        <span style="color:red">refresh_token:</span>
+        <br />
+        @await ViewContext.HttpContext.GetTokenAsync("refresh_token")
+        <br />
+        <span style="color:red">Claims信息:</span><br />
+        @foreach (var item in User.Claims)
+        {
+            <span>@item.Type:</span>
+            <span>@item.Value:</span><br />
+        }
+    }
+    @if (ViewContext.HttpContext.GetTokenAsync("access_token").Result.Contains("."))
+    {
+        var parts = ViewContext.HttpContext.GetTokenAsync("access_token").Result.Split('.');
+        var header = parts[0];
+        var claims = parts[1];
+        var json = JObject.Parse(Encoding.UTF8.GetString(Base64Url.Decode(claims)));
+
+        <span style="color:red">access_token DeCode信息:</span><br />
+        <span>用户名：@json.GetValue("name")</span>
+        <br />
+        <span>邮箱：@json.GetValue("email")</span>
+    }
+
+
+</body>
+</html>

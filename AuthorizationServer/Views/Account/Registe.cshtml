@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+@model AuthorizationServer.ViewModels.LoginModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    @using (Html.BeginForm("Registe", "Account", FormMethod.Post))
+    {
+        <span>UserName:</span>
+        <input asp-for="Email" />
+        <span>PassWord:</span>
+        <input asp-for="PassWrod" type="password" />
+        <button>Login</button>
+    }
+</body>
+</html>

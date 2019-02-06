@@ -1,0 +1,55 @@
+﻿@model AuthorizationCode.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <span>UserName：</span>
+        <input type="text" name="Username" value="" /> <br />
+        <span>Password：</span>
+        <input type="password" name="Password" value="" /><br />
+        <button value="login" name="Button">登陆</button>
+        <button value="cancel" name="Button">取消</button>
+        <input asp-for="ReturnUrl" type="hidden" />
+        @*<input type="submit" value="Login" />
+            <input type="submit" value="Cancel" />*@
+    }
+    @if (Model.VisibleExternalProviders.Any())
+    {
+        <div class="col-md-6 col-sm-6 external-providers">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">External Login</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-inline">
+                        @foreach (var provider in Model.VisibleExternalProviders)
+                        {
+                            <li>
+                                @*<a class="btn btn-default"
+                                       asp-controller="External"
+                                       asp-action="Challenge"
+                                       asp-route-provider="@provider.AuthenticationScheme"
+                                       asp-route-returnUrl="@Model.ReturnUrl">
+                                        @provider.DisplayName
+                                    </a>*@
+                                <a href="/External/Challenge?provider=@provider.AuthenticationScheme&returnUrl=@Model.ReturnUrl">@provider.DisplayName</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+
+</body>
+</html>
