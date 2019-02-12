@@ -603,7 +603,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "B3wo/BPIZQmPX0GFRQcfmFtgD4eICL3CLUzyw/iHm4tT7c53IRSyFfSgz34bzXOlA3HoxRDeXO2tAB1SGlKarw==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -761,7 +761,7 @@
       ]
     },
     "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "7Vjjvdv7lWEaXBQOdOxdWEdFrJY7LOxf33MARDPGfSobdv5iwbe7SvF6/cpqagFwmU4GYF6+88Ay0ccIzyhLUA==",
+      "sha512": "JF+wDdfFiRl3rz3dPMfR6aR568AW2J5CUMmhSflgHDz4zbVK4/00ax8UHnHyEMvblPewgNugjuA4oyoL8Pex2g==",
       "type": "package",
       "path": "system.text.encodings.web/4.5.0",
       "files": [
@@ -787,23 +787,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dell\\.nuget\\packages\\": {},
+    "C:\\Users\\niq\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "F:\\OAuth2Authorization\\PassWord\\PassWord.csproj",
+      "projectUniqueName": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\PassWord.csproj",
       "projectName": "PassWord",
-      "projectPath": "F:\\OAuth2Authorization\\PassWord\\PassWord.csproj",
-      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "F:\\OAuth2Authorization\\PassWord\\obj\\",
+      "projectPath": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\PassWord.csproj",
+      "packagesPath": "C:\\Users\\niq\\.nuget\\packages\\",
+      "outputPath": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\niq\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -811,7 +814,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://192.168.2.45:8081/repository/nuget4net/": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
@@ -827,15 +832,15 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "IdentityModel": {
-            "target": "Package",
-            "version": "[3.10.5, )"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
+            "version": "2.2.0",
             "autoReferenced": true
+          },
+          "IdentityModel": {
+            "target": "Package",
+            "version": "3.10.5"
           }
         },
         "imports": [

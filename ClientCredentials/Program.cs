@@ -15,7 +15,7 @@ namespace ClientCredentials
     {
         static void Main(string[] args)
         {
-            //var Singnature = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.AWo3hMYNvo5EEzxOwYSR8weafaj4OnrcwsW2PJzmxgI";
+            var Singnature = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.AWo3hMYNvo5EEzxOwYSR8weafaj4OnrcwsW2PJzmxgI";
 
             //var b = Convert.FromBase64String(Singnature);
 

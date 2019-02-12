@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AttributeRouting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace ResourcesServer.Controllers
 {
     [Route("identity")]
+    //[RoutePrefix]
     [Authorize]
     public class IdentityController : ControllerBase
     {
+        /**使用RoutePrefix 需要导入包： AttributeRouting
+         */
+
         /// <summary>
         /// 获取当前的信息
         /// </summary>

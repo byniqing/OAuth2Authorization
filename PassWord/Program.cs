@@ -10,6 +10,17 @@ using System.Threading.Tasks;
 
 namespace PassWord
 {
+    public static class ExtensionHelper
+    {/// <summary>
+     /// 将对象转化成json字符串
+     /// </summary>
+     /// <param name="obj"></param>
+     /// <returns></returns>
+        public static string ToJson(this Object obj)
+        {
+            return JsonConvert.SerializeObject(obj);
+        }
+    }
     /// <summary>
     /// 客户端模式，请求授权服务器获取token，请求资源服务器获取资源
     /// 依赖包：IdentityModel
@@ -18,6 +29,18 @@ namespace PassWord
     {
         static void Main(string[] args)
         {
+            var body = new
+            {
+                token = "t",
+                action = "userInfo",
+            }.ToJson();
+
+            var result = HttpHelper.HttpPostAsync("http://localhost:5002/api/userInfo", body).Result;
+
+
+            Console.WriteLine(result);
+            Console.ReadLine();
+
             string Authority = "http://localhost:5003";
             string ApiResurce = "http://localhost:5002/";
             var tokenCliet = new HttpClient()
@@ -105,7 +128,6 @@ namespace PassWord
             //请求并返回字符串
             var apiResource1 = tokenCliet.GetStringAsync("identity").Result;
             var userinfo = tokenCliet.GetStringAsync("identity/userinfo").Result;
-
             var j = JObject.Parse(userinfo);
             //或者
             var getVal = tokenCliet.GetAsync("api/values").Result;

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ResourcesServer.Filter;
 using System.Linq;
 
 namespace ResourcesServer.Controllers
