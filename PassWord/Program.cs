@@ -3,6 +3,7 @@ using IdentityModel.Client;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -136,6 +137,26 @@ namespace PassWord
                 Console.WriteLine(getVal.Content.ReadAsStringAsync().Result);
             }
             Console.ReadLine();
+        }
+        public static string APIPostBack(string url, string posts, bool check, string contentType)
+        {
+            byte[] postData = Encoding.UTF8.GetBytes(posts);
+            WebClient client = new WebClient();
+
+            client.Headers.Add("Content-Type", contentType);
+            client.Headers.Add("ContentLength", postData.Length.ToString());
+            //这里url要组装安全标记等参数
+            byte[] responseData = null;
+            string result = "";
+            try
+            {
+                responseData = client.UploadData(url, "POST", postData);
+                result = Encoding.UTF8.GetString(responseData);
+            }
+            catch (Exception ex)
+            {
+            }
+            return result;
         }
     }
 
