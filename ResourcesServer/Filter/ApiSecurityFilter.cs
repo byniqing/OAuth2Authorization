@@ -55,6 +55,29 @@ namespace ResourcesServer.Filter
                     JObject rss = JObject.Parse(rawRequest);
                     var appid = (string)rss.GetValue("token");
                     var uuid = (string)rss.GetValue("action");
+
+
+                    //var app = Dal.ass(appid);
+                    //var app = 0;
+                    //var appKey = app == null ? "" : 0;// app.AppKey;
+                    var appKey = "0";
+                    var timestamp = (string)rss.GetValue("timestamp");
+                    var signature = (string)rss.GetValue("signature");
+
+                    var array = new[] { appid, uuid, timestamp, appKey };
+                    Array.Sort(array);
+                    var newSignature = GetMd5(string.Join("", array));
+
+
+                    if (string.IsNullOrEmpty(appKey) || newSignature != signature)
+                    {
+                        responseBody = new
+                        {
+                            code = 400,
+                            errmsg = "没有访问权限"
+                        };
+                    }
+
                     //判断请求的Action，body的scope和token中的scope是否一致
 
                     //var username = request.HttpContext.User.Claims.First(x => x.Type == "userInfo").Value;
@@ -65,6 +88,25 @@ namespace ResourcesServer.Filter
             }
 
             //context.HttpContext.Request.Body.
+        }
+        /// <summary>
+        /// 进行MD5效验
+        /// </summary>
+        /// <param name="strmd5"></param>
+        /// <returns></returns>
+        public static string GetMd5(string strmd5)
+        {
+            byte[] md5Bytes = ASCIIEncoding.Default.GetBytes(strmd5);
+            byte[] encodedBytes;
+            MD5 md5;
+            md5 = new MD5CryptoServiceProvider();
+            //FileStream fs= new FileStream(filepath,FileMode.Open,FileAccess.Read);
+            encodedBytes = md5.ComputeHash(md5Bytes);
+            string nn = BitConverter.ToString(encodedBytes);
+            nn = Regex.Replace(nn, "-", "");//因为转化完的都是34-2d这样的，所以替换掉- 
+            nn = nn.ToLower();//根据需要转化成小写
+            //fs.Close();
+            return nn;
         }
     }
 }

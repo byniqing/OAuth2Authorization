@@ -12989,11 +12989,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "F:\\core\\tt\\OAuth2Authorization\\AuthorizationCode\\AuthorizationCode.csproj",
+      "projectUniqueName": "F:\\OAuth2Authorization\\AuthorizationCode\\AuthorizationCode.csproj",
       "projectName": "AuthorizationCode",
-      "projectPath": "F:\\core\\tt\\OAuth2Authorization\\AuthorizationCode\\AuthorizationCode.csproj",
+      "projectPath": "F:\\OAuth2Authorization\\AuthorizationCode\\AuthorizationCode.csproj",
       "packagesPath": "C:\\Users\\niq\\.nuget\\packages\\",
-      "outputPath": "F:\\core\\tt\\OAuth2Authorization\\AuthorizationCode\\obj\\",
+      "outputPath": "F:\\OAuth2Authorization\\AuthorizationCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

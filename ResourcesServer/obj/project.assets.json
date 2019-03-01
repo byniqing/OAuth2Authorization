@@ -13228,11 +13228,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "F:\\core\\tt\\OAuth2Authorization\\ResourcesServer\\ResourcesServer.csproj",
+      "projectUniqueName": "F:\\OAuth2Authorization\\ResourcesServer\\ResourcesServer.csproj",
       "projectName": "ResourcesServer",
-      "projectPath": "F:\\core\\tt\\OAuth2Authorization\\ResourcesServer\\ResourcesServer.csproj",
+      "projectPath": "F:\\OAuth2Authorization\\ResourcesServer\\ResourcesServer.csproj",
       "packagesPath": "C:\\Users\\niq\\.nuget\\packages\\",
-      "outputPath": "F:\\core\\tt\\OAuth2Authorization\\ResourcesServer\\obj\\",
+      "outputPath": "F:\\OAuth2Authorization\\ResourcesServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

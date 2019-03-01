@@ -796,11 +796,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\PassWord.csproj",
+      "projectUniqueName": "F:\\OAuth2Authorization\\PassWord\\PassWord.csproj",
       "projectName": "PassWord",
-      "projectPath": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\PassWord.csproj",
+      "projectPath": "F:\\OAuth2Authorization\\PassWord\\PassWord.csproj",
       "packagesPath": "C:\\Users\\niq\\.nuget\\packages\\",
-      "outputPath": "F:\\core\\tt\\OAuth2Authorization\\PassWord\\obj\\",
+      "outputPath": "F:\\OAuth2Authorization\\PassWord\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
